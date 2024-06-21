@@ -1,4 +1,8 @@
 <?php
+session_start();
+include 'auth.php';
+checkUserLoggedIn();
+
 try {
     // Connexion à MySQL
     $bdd = new PDO('mysql:host=localhost;dbname=rando;charset=utf8', 'root', '');
